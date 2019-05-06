@@ -33,6 +33,7 @@ namespace Models {
 
         public People() {
             Random rand = new Random();
+            PeopleList = new List<Person>();
             
             PeopleList.Add(new Person("John", "Smith", new DateTime(rand.Next(1950,2010), rand.Next(1,12), rand.Next(1, 28))));
             PeopleList.Add(new Person("Peter", "Brown", new DateTime(rand.Next(1950,2010), rand.Next(1,12), rand.Next(1, 28))));
