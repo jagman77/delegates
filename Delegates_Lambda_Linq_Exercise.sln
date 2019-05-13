@@ -9,6 +9,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileParserNetStandard_Tests
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonHandler_Tests", "PersonHandler_Tests\PersonHandler_Tests.csproj", "{C5E28619-56D4-4761-A9FA-BC8613AB6996}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F0FC700B-9837-47CE-A349-35CF068DCC40}"
+	ProjectSection(SolutionItems) = preProject
+		Files.zip = Files.zip
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
