@@ -14,7 +14,8 @@
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Delegates_Lambda_Linq_Exercise" expanded="True">
-            <Node name="PersonHandler_Tests" expanded="True" />
+            <Node name="Delegate_Exercise" expanded="True" />
+            <Node name="PersonHandler_Tests" selected="True" />
           </Node>
         </State>
       </Pad>
