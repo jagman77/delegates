@@ -9,7 +9,7 @@ namespace Delegate_Exercise {
     public class CsvHandler {
         
         /// <summary>
-        /// Takes a list of list of strings applies datahandling via dataHandler delegate and writes result as csv to writeFile.
+        /// Reads a csv file (readfile) and applies datahandling via dataHandler delegate and writes result as csv to writeFile.
         /// </summary>
         /// <param name="readFile"></param>
         /// <param name="writeFile"></param>
