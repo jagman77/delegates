@@ -18,6 +18,8 @@ namespace FileParserNetStandard {
         public List<string> ReadFile(string filePath) {
             List<string> lines = new List<string>();
 
+            lines = File.ReadAllLines(filePath).ToList();
+
             return lines;
         }
 
@@ -28,9 +30,17 @@ namespace FileParserNetStandard {
         /// <param name="filePath"></param>
         /// <param name="delimeter"></param>
         /// <param name="rows"></param>
-        public void WriteFile(string filePath, char delimeter, List<List<string>> rows) {
+        public void WriteFile(string filePath, char delimeter, List<List<string>> rows)
+        {
+            StreamWriter sw = new StreamWriter(filePath);
 
-            
+            foreach (List<string> row in rows)
+            {
+                string csv = string.Join(delimeter.ToString(), row);
+                sw.WriteLine(csv);
+            }
+
+            sw.Close();
         }
         
         /// <summary>
@@ -40,7 +50,14 @@ namespace FileParserNetStandard {
         /// <param name="delimeter"></param>
         /// <returns></returns>
         public List<List<string>> ParseData(List<string> data, char delimeter) {
-            return new List<List<string>>();  //-- return result here
+
+            List<List<string>> results = new List<List<string>>();
+            for (int i = 0; i < data.Count; i++)
+            {
+                results.Add(data[i].Split(delimeter).ToList());
+            }
+
+            return results;  //-- return result here
         }
         
         /// <summary>
@@ -49,7 +66,14 @@ namespace FileParserNetStandard {
         /// <param name="data"></param>
         /// <returns></returns>
         public List<List<string>> ParseCsv(List<string> data) {
-            return new List<List<string>>();  //-- return result here
+            
+            List<List<string>> results = new List<List<string>>();
+            for (int i = 0; i < data.Count; i++)
+            {
+                results.Add(data[i].Split(',').ToList());
+            }
+
+            return results;  //-- return result here
         }
     }
 }
